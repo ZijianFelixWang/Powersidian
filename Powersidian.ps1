@@ -14,16 +14,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+param ($exportFolderPath = "E:\Powersidian-Temp", # Change this to your desired export folder path
+    $source = "E:\Notes", # Change this to your notes folder path
+    $destination = $(Join-Path -Path $exportFolderPath -ChildPath "Notes-Backup"), # Change this to your desired backup folder path
+    $outputFilePath = $("$exportFolderPath\Obsidian2024.pdf"), # Change this to your desired output file path
+    $notesFilePath = $("$exportFolderPath\Catalog.txt"), # Change this to your notes catalog path.
+    $obsidianPath = $(Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) -ChildPath "Programs\obsidian\Obsidian.exe"))
+
 $debug = $false
 $pdfDebug = $false
-
-$exportFolderPath = "E:\Powersidian-Temp"   # Change this to your desired export folder path
-$source = "E:\Notes"    # Change this to your notes folder path
-$destination = Join-Path -Path $exportFolderPath -ChildPath "Notes-Backup" # Change this to your desired backup folder path
-$outputFilePath = "$exportFolderPath\CombinedOutput.pdf" # Change this to your desired output file path
-$notesFilePath = "$exportFolderPath\Catalog.txt" # Change this to your notes catalog path.
-
-$obsidianPath = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) -ChildPath "Programs\obsidian\Obsidian.exe"
 
 Write-Host "Powersidian  Copyright 2024 Nuaptan."
 Write-Host "This program comes with ABSOLUTELY NO WARRANTY."
