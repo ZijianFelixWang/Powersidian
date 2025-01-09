@@ -1,6 +1,6 @@
 # Powersidian
 ## Introduction
-**Powersidian** is a PowerShell script that helps you export a whole vault of notes easily and combine the exported PDFs into a single book.
+**Powersidian** is a PowerShell script that helps you export a whole Obsidian vault of notes easily and combine the exported PDFs into a single book.
 
 ## Requirements
 - Obsidian.
